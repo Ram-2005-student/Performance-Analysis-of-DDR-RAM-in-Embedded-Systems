@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>RAM Project Portfolio</title>
+  <style>
+    :root {
+      --primary: #0077cc;
+      --dark: #1a1a1a;
+      --light: #f4f4f4;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: var(--light);
+      color: #333;
+      scroll-behavior: smooth;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      background: #fff;
+      padding: 12px 0;
+      border-bottom: 1px solid #ddd;
+      text-align: center;
+      z-index: 1000;
+    }
+
+    nav a {
+      margin: 0 20px;
+      text-decoration: none;
+      color: var(--dark);
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--primary);
+    }
+
+    header {
+      background: var(--dark);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    header p.typing {
+      font-size: 1.2rem;
+      white-space: nowrap;
+      overflow: hidden;
+      width: 0;
+      border-right: 2px solid white;
+      animation: typing 4s steps(40, end) forwards, blink 0.75s step-end infinite;
+    }
+
+    @keyframes typing {
+      to { width: 100%; }
+    }
+
+    @keyframes blink {
+      50% { border-color: transparent; }
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 960px;
+      margin: auto;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: var(--primary);
+      text-align: center;
+    }
+
+    .card {
+      background: #fff;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      margin-bottom: 30px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: var(--primary);
+      color: #fff;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-top: 15px;
+      transition: background-color 0.3s;
+    }
+
+    .button:hover {
+      background-color: #005fa3;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+    }
+
+    th, td {
+      padding: 10px;
+      border: 1px solid #ddd;
+      text-align: center;
+    }
+
+    footer {
+      background: var(--dark);
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 600px) {
+      nav a {
+        display: block;
+        margin: 10px 0;
+      }
+
+      header h1 {
+        font-size: 1.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>RAM-Based Minor Project</h1>
+    <p class="typing">Performance Analysis of DDR RAM in Embedded Systems</p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#project">Project</a>
+    <a href="#embedded">Trends</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <div class="card">
+      <p>I’m an Electronics & Communication Engineering student with a passion for memory architecture, embedded systems, and real-time applications. This project reflects my understanding of how DDR RAM impacts embedded system performance.</p>
+    </div>
+  </section>
+<section id="ram-slides">
+  <h2>📽️ RAM Project Highlights</h2>
+  <div class="card" style="background: linear-gradient(135deg, #e3f2fd, #ffffff);">
+    <h3>🔍 Project Focus</h3>
+    <p>Evaluating DDR3 vs DDR4 memory performance in embedded systems using STM32 and Keil RTOS environment.</p>
+  </div>
+
+  <div class="card" style="background: linear-gradient(135deg, #fbe9e7, #ffffff);">
+    <h3>🧪 Testing Environment</h3>
+    <ul>
+      <li>STM32F4 & STM32H7 boards</li>
+      <li>Keil µVision IDE</li>
+      <li>RTOS for real-time scheduling</li>
+      <li>Memory Benchmarks: Read/Write Latency</li>
+    </ul>
+  </div>
+
+  <div class="card" style="background: linear-gradient(135deg, #e8f5e9, #ffffff);">
+    <h3>📈 Key Observations</h3>
+    <ul>
+      <li>DDR4 showed 38% faster average write speed</li>
+      <li>DDR4 latency improved by 25% over DDR3</li>
+      <li>Best performance under RTOS-controlled memory cycles</li>
+    </ul>
+  </div>
+
+  <div class="card" style="background: linear-gradient(135deg, #f3e5f5, #ffffff);">
+    <h3>📌 Conclusion</h3>
+    <p>DDR4 is better suited for next-generation embedded applications demanding speed, efficiency, and multitasking under real-time constraints.</p>
+    <a href="#charts" class="button">📊 View Charts</a>
+  </div>
+</section>
+
+<!-- Bar Chart Section -->
+<section id="charts">
+  <h2>📊 Embedded RAM Usage Trends (2015–2025)</h2>
+  <div class="card">
+    <h3>Average RAM in Embedded Systems (Bar Graph)</h3>
+    <canvas id="barChart" width="400" height="200"></canvas>
+  </div>
+</section>
+
+<!-- Load Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<!-- Chart Script -->
+<script>
+  const barCtx = document.getElementById('barChart').getContext('2d');
+  const barChart = new Chart(barCtx, {
+    type: 'bar',
+    data: {
+      labels: ['2015','2016','2017','2018','2019','2020','2021','2022','2023','2024','2025'],
+      datasets: [{
+        label: 'Avg RAM (MB)',
+        data: [128, 256, 512, 512, 1024, 2048, 2048, 4096, 4096, 8192, 8192],
+        backgroundColor: '#0077cc'
+      }]
+    },
+    options: {
+      scales: {
+        y: { beginAtZero: true }
+      },
+      plugins: {
+        legend: {
+          labels: {
+            color: '#1a1a1a'
+          }
+        }
+      }
+    }
+  });
+</script>
+
+
+
+  <section id="project">
+    <h2>Project Overview</h2>
+    <div class="card">
+      <p><strong>Title:</strong> Performance Analysis of DDR RAM in Embedded Systems</p>
+      <p><strong>Description:</strong> This project benchmarks DDR3 vs DDR4 memory performance on ARM-based microcontrollers to evaluate speed and efficiency in embedded environments.</p>
+      <ul>
+        <li>Tested real-time read/write latency</li>
+        <li>Used STM32, Keil µVision, RTOS</li>
+        <li>Analyzed CPU-RAM coordination under load</li>
+      </ul>
+      <a href="RAM_Project_Report.pdf" download class="button">📄 Download Project Report (PDF)</a>
+    </div>
+  </section>
+
+  <section id="embedded">
+    <h2>Trends in Embedded Systems (2020–2025)</h2>
+    <div class="card">
+      <ul>
+        <li><strong>2020:</strong> Edge AI & TinyML on MCUs like ESP32 (240 MHz)</li>
+        <li><strong>2021:</strong> Raspberry Pi Pico launched (133 MHz dual-core)</li>
+        <li><strong>2022:</strong> i.MX RT1170 (1 GHz) — world's fastest MCU</li>
+        <li><strong>2023:</strong> Jetson Nano enables GPU-based edge AI</li>
+        <li><strong>2025:</strong> STM32MP2 with dual Cortex-A35 + Cortex-M4 for hybrid real-time OS</li>
+      </ul>
+      <table>
+        <thead>
+          <tr>
+            <th>Year</th>
+            <th>Platform</th>
+            <th>Speed</th>
+            <th>Highlight</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>2020</td>
+            <td>ESP32</td>
+            <td>240 MHz</td>
+            <td>Dual-core, WiFi/BLE</td>
+          </tr>
+          <tr>
+            <td>2021</td>
+            <td>RP2040</td>
+            <td>133 MHz</td>
+            <td>Low-cost, Dual-core</td>
+          </tr>
+          <tr>
+            <td>2022</td>
+            <td>i.MX RT1170</td>
+            <td>1 GHz</td>
+            <td>Fastest ARM Cortex-M MCU</td>
+          </tr>
+          <tr>
+            <td>2023</td>
+            <td>Jetson Nano</td>
+            <td>1.43 GHz + GPU</td>
+            <td>AI Inference & Vision</td>
+          </tr>
+          <tr>
+            <td>2025</td>
+            <td>STM32MP2 / M85</td>
+            <td>800 MHz – 1.5 GHz</td>
+            <td>Secure AI at the edge</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Skills Applied</h2>
+    <div class="card">
+      <ul>
+        <li>Embedded C Programming</li>
+        <li>Microcontroller Configurations</li>
+        <li>Memory Optimization</li>
+        <li>Real-Time Operating Systems (RTOS)</li>
+        <li>Performance Benchmarking</li>
+      </ul>
+    </div>
+  </section>
+<section id="ram-calculator">
+  <h2>⚙️ DDR RAM Performance Calculator</h2>
+  <div class="card">
+    <form id="perfCalc" onsubmit="calculatePerformance(event)">
+      <label>Clock Speed (MHz):</label><br>
+      <input type="number" id="clockSpeed" placeholder="e.g. 1600" required><br><br>
+
+      <label>Bus Width (bits):</label><br>
+      <input type="number" id="busWidth" placeholder="e.g. 64" required><br><br>
+
+      <label>Latency (in cycles):</label><br>
+      <input type="number" id="latency" placeholder="e.g. 12" required><br><br>
+
+      <button type="submit" class="button">🧮 Calculate</button>
+    </form>
+
+    <div id="results" style="margin-top:20px;"></div>
+  </div>
+</section>
+<script>
+  function calculatePerformance(e) {
+    e.preventDefault();
+
+    const clock = parseFloat(document.getElementById("clockSpeed").value);
+    const bus = parseFloat(document.getElementById("busWidth").value);
+    const latency = parseFloat(document.getElementById("latency").value);
+
+    const bandwidth = (clock * (bus / 8) * 2) / 1000; // MB/s (Double Data Rate)
+    const latencyNs = (latency / clock) * 1000;       // ns
+    const accessTime = latencyNs;                     // same as latency in ns
+
+    const resultHTML = `
+      <h3>📊 Results:</h3>
+      <ul>
+        <li><strong>Theoretical Bandwidth:</strong> ${bandwidth.toFixed(2)} MB/s</li>
+        <li><strong>Latency:</strong> ${latencyNs.toFixed(2)} ns</li>
+        <li><strong>Access Time:</strong> ${accessTime.toFixed(2)} ns</li>
+      </ul>
+    `;
+    document.getElementById("results").innerHTML = resultHTML;
+  }
+</script>
+<section id="extra-calculators">
+  <h2>🧠 Additional RAM Calculators</h2>
+
+  <div class="card">
+    <h3>🕒 Clock Speed Calculator</h3>
+    <p>Given latency (ns) and latency cycles, calculate clock speed (MHz):</p>
+    <form onsubmit="calcClockSpeed(event)">
+      <label>Latency (ns):</label><br>
+      <input type="number" id="latencyNsClock" required><br><br>
+
+      <label>Latency Cycles:</label><br>
+      <input type="number" id="latencyCyclesClock" required><br><br>
+
+      <button type="submit" class="button">🧮 Calculate Clock Speed</button>
+    </form>
+    <div id="clockResult" style="margin-top:15px;"></div>
+  </div>
+
+  <div class="card">
+    <h3>📏 Bus Width Calculator</h3>
+    <p>Given bandwidth and clock speed, estimate bus width:</p>
+    <form onsubmit="calcBusWidth(event)">
+      <label>Bandwidth (MB/s):</label><br>
+      <input type="number" id="bandwidthBus" required><br><br>
+
+      <label>Clock Speed (MHz):</label><br>
+      <input type="number" id="clockBus" required><br><br>
+
+      <button type="submit" class="button">🧮 Calculate Bus Width</button>
+    </form>
+    <div id="busResult" style="margin-top:15px;"></div>
+  </div>
+
+  <div class="card">
+    <h3>⏱️ Latency Calculator</h3>
+    <p>Given clock speed and latency cycles, estimate latency in nanoseconds:</p>
+    <form onsubmit="calcLatency(event)">
+      <label>Clock Speed (MHz):</label><br>
+      <input type="number" id="clockLat" required><br><br>
+
+      <label>Latency Cycles:</label><br>
+      <input type="number" id="cyclesLat" required><br><br>
+
+      <button type="submit" class="button">🧮 Calculate Latency</button>
+    </form>
+    <div id="latencyResult" style="margin-top:15px;"></div>
+  </div>
+</section>
+<script>
+  function calcClockSpeed(e) {
+    e.preventDefault();
+    const latencyNs = parseFloat(document.getElementById("latencyNsClock").value);
+    const cycles = parseFloat(document.getElementById("latencyCyclesClock").value);
+    const clockSpeed = (cycles / latencyNs) * 1000;
+    document.getElementById("clockResult").innerHTML =
+      `<strong>Estimated Clock Speed:</strong> ${clockSpeed.toFixed(2)} MHz`;
+  }
+
+  function calcBusWidth(e) {
+    e.preventDefault();
+    const bandwidth = parseFloat(document.getElementById("bandwidthBus").value);
+    const clock = parseFloat(document.getElementById("clockBus").value);
+    const busWidth = (bandwidth * 1000) / (clock * 2);
+    document.getElementById("busResult").innerHTML =
+      `<strong>Estimated Bus Width:</strong> ${(busWidth * 8).toFixed(2)} bits`;
+  }
+
+  function calcLatency(e) {
+    e.preventDefault();
+    const clock = parseFloat(document.getElementById("clockLat").value);
+    const cycles = parseFloat(document.getElementById("cyclesLat").value);
+    const latencyNs = (cycles / clock) * 1000;
+    document.getElementById("latencyResult").innerHTML =
+      `<strong>Estimated Latency:</strong> ${latencyNs.toFixed(2)} ns`;
+  }
+</script>
+
+
+
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <div class="card">
+      <p>Interested in this project or want to collaborate? I'd love to connect.</p>
+      <p><strong>Email:</strong> <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+      <p><strong>Phone:</strong> <a href="tel:+917569839494">+91 75698 39494</a></p>
+      <a href="mailto:your.email@example.com" class="button">📧 Email Me</a>
+    </div>
+  </section>
+<section id="ddr-analysis">
+  <h2>📘 DDR RAM Performance Analysis - Key Concepts</h2>
+  <div class="card">
+    <h3>🔧 Basic Parameters</h3>
+    <ul>
+      <li><strong>Clock Speed (MHz):</strong> Operating frequency of the memory.</li>
+      <li><strong>Bus Width (bits):</strong> Data lines; embedded systems may use 16/32/64-bit buses.</li>
+      <li><strong>Latency (cycles):</strong> Delay in clock cycles to access memory (e.g., CAS latency).</li>
+      <li><strong>Bandwidth (MB/s):</strong> Data transfer rate calculated from clock and bus width.</li>
+      <li><strong>Access Time:</strong> Real-time responsiveness, usually in nanoseconds (ns).</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>🧠 Calculations</h3>
+    <ul>
+      <li><strong>Latency (ns) =</strong> (CAS cycles ÷ Clock MHz) × 1000</li>
+      <li><strong>Bandwidth (MB/s) =</strong> Clock MHz × (Bus Width ÷ 8) × 2</li>
+      <li><strong>Access Time ≈</strong> Latency (ns)</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>📊 Advanced Metrics</h3>
+    <ul>
+      <li><strong>Row/Column Access Time:</strong> Low-level DRAM internal metrics.</li>
+      <li><strong>Refresh Rate:</strong> Interval required to maintain data integrity.</li>
+      <li><strong>Power Consumption:</strong> Important in battery-sensitive embedded systems.</li>
+      <li><strong>ECC (Error Correction Code):</strong> For reliable systems.</li>
+      <li><strong>Thermal Behavior:</strong> Heat can reduce memory efficiency and reliability.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>🛠️ Tools and Techniques</h3>
+    <ul>
+      <li><strong>Hardware:</strong> Oscilloscope, Logic Analyzer, ST-Link</li>
+      <li><strong>Software:</strong> Keil uVision, STM32CubeIDE, Custom Benchmarks</li>
+      <li><strong>Simulations:</strong> MATLAB, LTspice, Proteus for memory bus modeling</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>✅ Summary Table</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Metric</th>
+          <th>Unit</th>
+          <th>Source</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Clock Frequency</td>
+          <td>MHz</td>
+          <td>Specification</td>
+        </tr>
+        <tr>
+          <td>Bus Width</td>
+          <td>bits</td>
+          <td>Datasheet</td>
+        </tr>
+        <tr>
+          <td>CAS Latency</td>
+          <td>cycles</td>
+          <td>Specification</td>
+        </tr>
+        <tr>
+          <td>Bandwidth</td>
+          <td>MB/s</td>
+          <td>Calculated</td>
+        </tr>
+        <tr>
+          <td>Latency</td>
+          <td>ns</td>
+          <td>Calculated</td>
+        </tr>
+        <tr>
+          <td>Access Time</td>
+          <td>ns</td>
+          <td>Measured/Estimated</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+
+  <footer>
+    <p>&copy; 2025 Your Name | RAM Project Portfolio</p>
+  </footer>
+
+  <div class="card">
+    <h3>Embedded System Models and Specifications</h3>
+    <ul>
+      <li><img src="https://upload.wikimedia.org/wikipedia/commons/e/e2/Raspberry_Pi_4_Model_B_-_Side.jpg" width="100" alt="Raspberry Pi 4" /> <strong>Raspberry Pi 4:</strong> Quad-core Cortex-A72, 4GB RAM, HDMI, GPIO</li>
+      <li><img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Arduino_Uno_-_R3.jpg" width="100" alt="Arduino Uno" /> <strong>Arduino Uno:</strong> ATmega328P, 16MHz, 2KB SRAM, Digital I/O Pins</li>
+      <li><img src="https://upload.wikimedia.org/wikipedia/commons/e/e5/Esp32_devkit.jpg" width="100" alt="ESP32" /> <strong>ESP32:</strong> Dual-core Xtensa LX6, Wi-Fi, Bluetooth, 520KB SRAM</li>
+      <li><img src="https://upload.wikimedia.org/wikipedia/commons/7/79/BeagleBoneBlack.jpg" width="100" alt="BeagleBone Black" /> <strong>BeagleBone Black:</strong> AM335x 1GHz ARM® Cortex-A8, HDMI, GPIO</li>
+      <li><img src="https://upload.wikimedia.org/wikipedia/commons/f/f1/STM32_Discovery_board.jpg" width="100" alt="STM32 Discovery Kit" /> <strong>STM32 Discovery Kit:</strong> ARM Cortex-M4, 256KB SRAM, USB, Debug Interface</li>
+    </ul>
+  </div>
+<nav>
+<!-- Search Bar -->
+<div style="background:#fff;padding:15px 20px;text-align:center;border-bottom:1px solid #ddd;">
+  <form id="searchForm" action="https://www.google.com/search" method="GET" target="_blank" style="display:inline-block;">
+    <input 
+      type="text" 
+      name="q" 
+      placeholder="Search on Google..." 
+      style="padding:10px 15px;width:280px;border-radius:6px;border:1px solid #ccc;"
+      required
+    />
+    <button 
+      type="submit" 
+      style="
+        padding:10px 15px;
+        margin-left:5px;
+        background-color:#ffffff;
+        color:#0077cc;
+        border:2px solid #0077cc;
+        border-radius:5px;
+        cursor:pointer;
+        font-weight:bold;
+      ">
+      🔍
+    </button>
+  </form>
+</div>
+
+
+<!-- Smart Embedded Search Bar -->
+<div style="background:#fff;padding:15px;text-align:center;border-bottom:1px solid #ddd;">
+  <form onsubmit="vendorSearch(event)" style="display:inline-block;">
+    <input id="searchQuery" type="text" placeholder="Search embedded items..." required
+      style="padding:10px;width:240px;border:1px solid #ccc;border-radius:5px;">
+    
+    <select id="vendor" style="padding:10px;border-radius:5px;margin-left:5px;">
+      <option value="amazon">Amazon</option>
+      <option value="digikey">Digi-Key</option>
+      <option value="mouser">Mouser</option>
+      <option value="aliexpress">AliExpress</option>
+    </select>
+    
+    <button type="submit" style="padding:10px 15px;margin-left:5px;background:#0077cc;color:#fff;border:none;border-radius:5px;">
+      🔍
+    </button>
+  </form>
+</div>
+
+<script>
+  function vendorSearch(e) {
+    e.preventDefault();
+    const query = encodeURIComponent(document.getElementById("searchQuery").value.trim());
+    const vendor = document.getElementById("vendor").value;
+    let url = "";
+
+    switch (vendor) {
+      case "amazon":
+        url = `https://www.amazon.in/s?k=${query}+embedded+electronics`;
+        break;
+      case "digikey":
+        url = `https://www.digikey.in/en/products/result?s=${query}`;
+        break;
+      case "mouser":
+        url = `https://www.mouser.in/Search/Refine?Keyword=${query}`;
+        break;
+      case "aliexpress":
+        url = `https://www.aliexpress.com/wholesale?SearchText=${query}`;
+        break;
+    }
+
+    window.open(url, "_blank");
+  }
+</script>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Embedded Systems Notes</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      background-color: #f8f8f8;
+    }
+    h1 {
+      color: #333;
+    }
+    .pdf-container {
+      margin-top: 20px;
+      border: 2px solid #ccc;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      height: 800px;
+      overflow: auto;
+    }
+    .download-button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 24px;
+      background-color: #007BFF;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-size: 16px;
+    }
+    .download-button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  
+
+</body>
+</html>
